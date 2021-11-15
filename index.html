@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>자동차 경주 게임</title>
+    <link rel="stylesheet" href="/src/style/style.css">
   </head>
   <body>
     <div id="app">
@@ -13,15 +14,20 @@
         올바른 예) east,west,south,north <br />
       </p>
       <form>
-        <input type="text" />
-        <button>확인</button>
+        <input id="car-names-input" type="text" />
+        <button type="button" id="car-names-submit">확인</button>
       </form>
-      <h4>시도할 횟수를 입력해주세요.</h4>
-      <form>
-        <input type="number" />
-        <button>확인</button>
+      <form class="section-2">
+        <h4>시도할 횟수를 입력해주세요.</h4>
+        <input id="racing-count-input" type="number" />
+        <button type="button" id="racing-count-submit">확인</button>
       </form>
-      <h4>📄 실행 결과</h4>
+      <h4 class="section-3">📄 실행 결과</h4>
+      <div class="section-4"></div>
     </div>
   </body>
+  <script src="src/index.js"></script>
+  <script type="module" src="/src/input/getRacingCounts.js"></script>
+  <script type="module" src="/src/input/getCarNames.js"></script>
+  <script type="module" src="/src/output/showCarStatus.js"></script>
 </html>
